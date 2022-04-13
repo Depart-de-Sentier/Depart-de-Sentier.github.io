@@ -1,3 +1,6 @@
 background-color: #807d96;
 background-image: url("images/45-degree-fabric-dark.png");
 color: white;
+.header {
+  margin-top: 4rem;
+}
