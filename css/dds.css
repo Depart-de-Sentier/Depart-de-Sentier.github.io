@@ -4,3 +4,7 @@ color: white;
 .header {
   margin-top: 4rem;
 }
+
+.one.fifth {
+  width: 20%;
+}
