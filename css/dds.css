@@ -4,3 +4,10 @@ color: white;
 .header {
   margin-top: 4rem;
 }
+
+.portrait {
+  max-width: 90%;
+  max-height: 90%;
+  height:auto;
+}
+
