@@ -11,3 +11,11 @@ color: white;
   height:auto;
 }
 
+.groupphoto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-bottom: 2rem;
+  filter: drop-shadow(4px 4px 4px black);
+}
