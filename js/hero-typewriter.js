@@ -10,7 +10,7 @@
   el.setAttribute('aria-live', 'polite');
 
   var i = 0;
-  var speed = 45;
+  var speed = 90;
 
   function type() {
     if (i < text.length) {

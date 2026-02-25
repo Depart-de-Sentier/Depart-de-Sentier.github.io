@@ -677,7 +677,7 @@ li {
 .team-card-image {
   width: 200px;
   height: 200px;
-  border-radius: 12px;
+  border-radius: 50%;
   overflow: hidden;
   margin: 0 auto var(--space-md);
   flex-shrink: 0;
@@ -2443,6 +2443,19 @@ a.news-tag:hover {
 /* --- Career Senior Engineer Page --- */
 .career-article-main {
   padding: var(--space-2xl) 0;
+}
+
+.career-article-main .btn-back-to-news,
+.career-article-main .news-article-title,
+.career-article-main .job-meta,
+.career-article-main .news-article-text,
+.career-article-main .job-description {
+  max-width: 592px;
+}
+
+.career-article-main .job-list {
+  padding-left: 0;
+  list-style-position: inside;
 }
 
 .job-meta {
