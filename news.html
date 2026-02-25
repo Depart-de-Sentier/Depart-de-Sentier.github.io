@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
-  <title>Départ de Sentier — Open Sustainability</title>
-  <meta name="description" content="Départ de Sentier (DdS) is a Swiss non-profit association supporting open sustainability assessment, software development, and public engagement.">
+  <title>News — Départ de Sentier</title>
+  <meta name="description" content="Latest announcements from Départ de Sentier: Brightcon, training schools, and career opportunities.">
   <meta name="author" content="Départ de Sentier">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/dds.css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-
 </head>
-<body>
+<body class="news-page">
 
   <!-- Navigation -->
   <nav class="site-nav">
@@ -34,7 +30,6 @@
         <li class="nav-dropdown nav-dropdown-about">
           <a href="about.html" class="nav-dropdown-toggle">About</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="missions.html">Mission</a></li>
             <li><a href="about/team.html">Team</a></li>
             <li><a href="governance.html">Governance</a></li>
             <li><a href="careers.html">Careers</a></li>
@@ -55,24 +50,49 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero hero-fullscreen" aria-label="Hero">
-    <div class="hero-bg">
-      <img src="images/DdS.jpg" alt="" class="hero-bg-image" aria-hidden="true">
-      <div class="hero-overlay" aria-hidden="true"></div>
-    </div>
-    <div class="hero-content">
-      <h1 class="hero-typewriter" id="hero-typewriter" aria-live="polite">Mapping the Path to Open Sustainability Assessment</h1>
-    </div>
-  </section>
+  <main class="news-main">
+    <div class="site-container">
+      <div class="news-trail">
+        <!-- Item 1: Brightcon -->
+        <article class="news-item">
+          <a href="brightcon.html" class="news-tag">#Community</a>
+          <a href="brightcon.html" class="news-tag">#Brightcon</a>
+          <h2 class="news-item-heading"><a href="brightcon.html">Brightcon 2026: Save the Date</a></h2>
+          <p class="news-item-text">The premier conference for the Brightway ecosystem. Join us in 2026 for a week of collaborative hacking and LCA innovation.</p>
+          <a href="brightcon.html" class="news-item-link">Read more</a>
+        </article>
 
-  <!-- Footer -->
+        <hr class="news-trail-divider">
+
+        <!-- Item 2: Autumn School -->
+        <article class="news-item">
+          <a href="autumn-school-proposals.html" class="news-tag">#Education</a>
+          <h2 class="news-item-heading"><a href="autumn-school-proposals.html">Call for Proposals: Autumn School 2026</a></h2>
+          <p class="news-item-text">We are seeking expert-led workshop proposals for our upcoming Autumn training session on open-source sustainability tools.</p>
+          <a href="autumn-school-proposals.html" class="news-item-link">Read more</a>
+        </article>
+
+        <hr class="news-trail-divider">
+
+        <!-- Item 3: Hiring -->
+        <article class="news-item">
+          <a href="career-senior-engineer.html" class="news-tag">#Careers</a>
+          <h2 class="news-item-heading"><a href="career-senior-engineer.html">Hiring: Senior Platform and Data Engineer</a></h2>
+          <p class="news-item-text">We are seeking a technical leader to evolve the Sentier platform. Help us bridge the gap between complex LCI data and scalable infrastructure.</p>
+          <a href="career-senior-engineer.html" class="news-item-link">View opening</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
   <footer class="site-footer">
     <div class="site-container">
       <div class="footer-content">
         <div class="footer-info">
           Départ de Sentier, Dorfsteig 8, 5223 Riniken AG, Switzerland.<br>
           <a href="https://www.zefix.ch/en/search/entity/list/firm/1550430">VAT CHE-329.638.515</a><br>
+          This webpage is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="CC BY-SA" class="cc-badge" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a><br>
           <a href="https://github.com/Depart-de-Sentier/dds-logo">Logo</a> by <a href="https://proov.fr/">Sylvain Prevost</a>.
         </div>
         <ul class="footer-links">
@@ -82,6 +102,5 @@
     </div>
   </footer>
 
-  <script src="js/hero-typewriter.js"></script>
 </body>
 </html>

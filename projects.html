@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
-  <title>Départ de Sentier — Open Sustainability</title>
-  <meta name="description" content="Départ de Sentier (DdS) is a Swiss non-profit association supporting open sustainability assessment, software development, and public engagement.">
+  <title>Projects — Départ de Sentier</title>
+  <meta name="description" content="Major projects at Départ de Sentier: Sentier platform, Agribalyse, GreenGrocer, and open sustainability assessment.">
   <meta name="author" content="Départ de Sentier">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/dds.css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-
 </head>
-<body>
+<body class="projects-page">
 
   <!-- Navigation -->
   <nav class="site-nav">
@@ -34,7 +30,6 @@
         <li class="nav-dropdown nav-dropdown-about">
           <a href="about.html" class="nav-dropdown-toggle">About</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="missions.html">Mission</a></li>
             <li><a href="about/team.html">Team</a></li>
             <li><a href="governance.html">Governance</a></li>
             <li><a href="careers.html">Careers</a></li>
@@ -55,25 +50,35 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero hero-fullscreen" aria-label="Hero">
-    <div class="hero-bg">
-      <img src="images/DdS.jpg" alt="" class="hero-bg-image" aria-hidden="true">
-      <div class="hero-overlay" aria-hidden="true"></div>
-    </div>
-    <div class="hero-content">
-      <h1 class="hero-typewriter" id="hero-typewriter" aria-live="polite">Mapping the Path to Open Sustainability Assessment</h1>
-    </div>
-  </section>
+  <main class="projects-main">
+    <div class="site-container">
+      <section class="projects-section" aria-labelledby="projects-heading">
+        <h1 id="projects-heading">Major Projects</h1>
 
-  <!-- Footer -->
+        <div class="projects-grid">
+          <article class="project-card">
+            <h2 class="project-title">Ademe: Sentier Foundation</h2>
+            <p class="project-description">Building the core implementation of the Sentier platform and opening the Agribalyse French national agriculture LCA database.</p>
+          </article>
+
+          <article class="project-card">
+            <h2 class="project-title">GreenGrocer (Horizon Europe)</h2>
+            <p class="project-description">Advancing the Sentier platform for the food and agriculture sector with PEF-compliant data.</p>
+            <a href="https://greengrocer.nilu.no/" class="project-link" target="_blank" rel="noopener noreferrer">greengrocer.nilu.no</a>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
   <footer class="site-footer">
     <div class="site-container">
       <div class="footer-content">
         <div class="footer-info">
           Départ de Sentier, Dorfsteig 8, 5223 Riniken AG, Switzerland.<br>
           <a href="https://www.zefix.ch/en/search/entity/list/firm/1550430">VAT CHE-329.638.515</a><br>
-          <a href="https://github.com/Depart-de-Sentier/dds-logo">Logo</a> by <a href="https://proov.fr/">Sylvain Prevost</a>.
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="CC BY-SA" class="cc-badge" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a>
         </div>
         <ul class="footer-links">
           <li><a href="https://github.com/Depart-de-Sentier" class="footer-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a></li>
@@ -82,6 +87,5 @@
     </div>
   </footer>
 
-  <script src="js/hero-typewriter.js"></script>
 </body>
 </html>
