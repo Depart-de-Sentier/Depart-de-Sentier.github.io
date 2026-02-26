@@ -4,6 +4,7 @@
    ============================================= */
 
 /* --- Brand Font --- */
+/* Place UrbaneRounded-Light.woff2 and UrbaneRounded-Light.woff in assets/fonts/ folder */
 @font-face {
   font-family: 'Urbane Rounded Light';
   src: url('../fonts/UrbaneRounded-Light.woff2') format('woff2'),
