@@ -2106,9 +2106,45 @@ a.news-tag:hover {
   margin: 0 auto;
 }
 
+.brightcon-2026-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.brightcon-2026-row .brightcon-card {
+  width: calc((100% - 1.5rem) / 2);
+  min-width: 0;
+}
+
+.brightcon-card.brightcon-card-2026 {
+  background: #3C5343;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.brightcon-card-2026 .brightcon-card-title {
+  color: white;
+}
+
+.brightcon-card-2026 .card-btn-website {
+  background-color: var(--color-accent-sage);
+  border-color: var(--color-accent-sage);
+  color: white;
+}
+
+.brightcon-card-2026 .card-btn-website:hover {
+  background-color: #6d9886;
+  border-color: #6d9886;
+  color: white;
+}
+
+.brightcon-card-2026 .card-btn-website svg {
+  stroke: white;
+}
+
 .brightcon-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   width: 100%;
 }
@@ -2384,12 +2420,79 @@ a.news-tag:hover {
 }
 
 /* --- Autumn School Proposals Page --- */
+.autumn-school-page {
+  background-color: var(--color-bg-subtle);
+}
+
 .autumn-school-main {
   padding: var(--space-2xl) 0;
 }
 
-.cfp-sections {
-  margin-top: var(--space-xl);
+.autumn-school-main .btn-back-to-news {
+  margin-bottom: var(--space-lg);
+}
+
+.cfp-card {
+  background-color: var(--color-primary-beige);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(60, 83, 67, 0.06);
+}
+
+.cfp-card-inner {
+  padding: 3rem;
+}
+
+@media (max-width: 600px) {
+  .cfp-card-inner {
+    padding: 1.5rem;
+  }
+}
+
+.cfp-venue-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 3rem;
+}
+
+.brightcon-venue-image {
+  object-fit: contain;
+  max-height: none;
+}
+
+.cfp-title {
+  font-family: 'Urbane Rounded Light', var(--font-heading);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--color-primary-dark-green);
+  margin: 0 0 var(--space-lg);
+}
+
+.cfp-intro {
+  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-dark-charcoal);
+  margin: 0 0 var(--space-xl);
+}
+
+.cfp-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 900px) {
+  .cfp-layout {
+    grid-template-columns: 1fr 280px;
+  }
+}
+
+.cfp-content {
+  min-width: 0;
 }
 
 .cfp-section {
@@ -2397,17 +2500,16 @@ a.news-tag:hover {
 }
 
 .cfp-section-heading {
-  font-family: var(--font-body);
+  font-family: 'Urbane Rounded Light', var(--font-heading);
   font-size: 1.25rem;
-  color: white;
-  background-color: var(--color-primary-dark-green);
-  padding: var(--space-sm) var(--space-md);
+  font-weight: 600;
+  color: var(--color-primary-dark-green);
   margin: 0 0 var(--space-md);
-  border-radius: var(--border-radius);
 }
 
 .cfp-list {
-  font-family: var(--font-body);
+  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-weight: 300;
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--color-dark-charcoal);
@@ -2416,15 +2518,63 @@ a.news-tag:hover {
 }
 
 .cfp-list li {
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
 }
 
 .cfp-text {
-  font-family: var(--font-body);
+  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-weight: 300;
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--color-dark-charcoal);
   margin: 0 0 var(--space-md);
+}
+
+.cfp-closing {
+  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-dark-charcoal);
+  margin: var(--space-xl) 0 0;
+}
+
+.cfp-key-dates {
+  border: 1px solid var(--color-accent-sage);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  background-color: rgba(132, 174, 153, 0.06);
+  height: fit-content;
+}
+
+.cfp-key-dates-heading {
+  font-family: 'Urbane Rounded Light', var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary-dark-green);
+  margin: 0 0 var(--space-md);
+}
+
+.cfp-key-dates-list {
+  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--color-dark-charcoal);
+  margin: 0;
+}
+
+.cfp-key-dates-list dt {
+  font-weight: 600;
+  color: var(--color-primary-dark-green);
+  margin-top: var(--space-sm);
+}
+
+.cfp-key-dates-list dt:first-of-type {
+  margin-top: 0;
+}
+
+.cfp-key-dates-list dd {
+  margin: 0.25rem 0 0;
 }
 
 /* --- Career Senior Engineer Page --- */
@@ -2891,6 +3041,10 @@ a.news-tag:hover {
   .schools-grid,
   .brightcon-grid {
     grid-template-columns: 1fr;
+  }
+
+  .brightcon-2026-row .brightcon-card {
+    width: 100%;
   }
 }
 
