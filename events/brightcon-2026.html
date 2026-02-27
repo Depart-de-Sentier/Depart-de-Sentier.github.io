@@ -23,9 +23,13 @@
   <nav class="site-nav">
     <div class="site-container">
       <a href="/">
-        <img src="../assets/images/Green Logo.svg" alt="Départ de Sentier" class="nav-logo">
+        <img src="../assets/images/logos/Green Logo.svg" alt="Départ de Sentier" class="nav-logo">
       </a>
-      <ul class="nav-links">
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="/">Home</a></li>
         <li class="nav-dropdown nav-dropdown-about">
           <a href="/about/" class="nav-dropdown-toggle">About</a>
@@ -33,19 +37,19 @@
             <li><a href="/about/#pillars-heading">Mission</a></li>
             <li><a href="/about/team.html">Team</a></li>
             <li><a href="/about/governance.html">Governance</a></li>
-            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/careers/">Careers</a></li>
           </ul>
         </li>
-        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="/projects.html">Projects</a></li>
         <li class="nav-dropdown nav-dropdown-events">
-          <a href="/events.html">Events</a>
+          <a href="/events/">Events</a>
           <ul class="nav-dropdown-menu">
             <li><a href="brightcon.html">Brightcon</a></li>
-            <li><a href="../schools.html">Schools</a></li>
+            <li><a href="/schools/">Schools</a></li>
           </ul>
         </li>
-        <li><a href="../news/news.html">News</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/contact.html">Contact</a></li>
         <li class="nav-cta"><a href="https://events.d-d-s.ch/">Become a Member</a></li>
       </ul>
     </div>
@@ -55,7 +59,7 @@
     <div class="site-container">
       <a href="brightcon.html" class="btn-back-to-news">Back to Events</a>
       <article class="brightcon-2026-content">
-        <img src="../assets/images/brightcon-2026-venue.png" alt="Brightcon 2026 at Aalborg University, Denmark" class="cfp-venue-image brightcon-venue-image">
+        <img src="../assets/images/events/brightcon-2026-venue.png" alt="Brightcon 2026 at Aalborg University, Denmark" class="cfp-venue-image brightcon-venue-image">
         <h1 class="brightcon-2026-title">Brightcon 2026: Save the Date</h1>
         <p class="brightcon-2026-text">Save the dates for Brightcon 2026. We are excited to announce that Brightcon 2026 will take place at Aalborg University, Denmark &amp; online this year.</p>
         <p class="brightcon-2026-text">Thanks to our cohost team, led by Prof. Massimo Pizzol from the Department of Sustainability and Planning, Aalborg University, Life Cycle Sustainability (LCS) research group, for making this possible.</p>
@@ -102,5 +106,6 @@
     </div>
   </footer>
 
+  <script src="../assets/js/script.js" defer></script>
 </body>
 </html>

@@ -23,9 +23,13 @@
   <nav class="site-nav">
     <div class="site-container">
       <a href="../">
-        <img src="../assets/images/Green Logo.svg" alt="Départ de Sentier" class="nav-logo">
+        <img src="../assets/images/logos/Green Logo.svg" alt="Départ de Sentier" class="nav-logo">
       </a>
-      <ul class="nav-links">
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="../">Home</a></li>
         <li class="nav-dropdown nav-dropdown-about">
           <a href="/about/" class="nav-dropdown-toggle">About</a>
@@ -33,19 +37,19 @@
             <li><a href="/about/#pillars-heading">Mission</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="governance.html">Governance</a></li>
-            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/careers/">Careers</a></li>
           </ul>
         </li>
-        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="/projects.html">Projects</a></li>
         <li class="nav-dropdown nav-dropdown-events">
-          <a href="../events.html" class="nav-dropdown-toggle">Events</a>
+          <a href="/events/" class="nav-dropdown-toggle">Events</a>
           <ul class="nav-dropdown-menu">
-            <li><a href="../events/brightcon.html">Brightcon</a></li>
-            <li><a href="../schools.html">Schools</a></li>
+            <li><a href="/events/brightcon.html">Brightcon</a></li>
+            <li><a href="/schools/">Schools</a></li>
           </ul>
         </li>
-        <li><a href="../news/news.html">News</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/contact.html">Contact</a></li>
         <li class="nav-cta"><a href="https://events.d-d-s.ch/">Become a Member</a></li>
       </ul>
     </div>
@@ -63,7 +67,7 @@
           <!-- Chris Mutel - President -->
           <article class="team-card">
             <div class="team-card-image">
-              <img src="../assets/images/Chris Mutel-circle.png" alt="Chris Mutel" width="200" height="200">
+              <img src="../assets/images/team/Chris Mutel-circle.png" alt="Chris Mutel" width="200" height="200">
             </div>
             <h2 class="team-card-name">Chris Mutel</h2>
             <p class="team-card-role">President, Board Member</p>
@@ -84,7 +88,7 @@
           <!-- Tomás Navarrete Gutierrez - Vice President -->
           <article class="team-card">
             <div class="team-card-image">
-              <img src="../assets/images/Tomas Navarrete-circle.png" alt="Tomás Navarrete" width="200" height="200">
+              <img src="../assets/images/team/Tomas Navarrete-circle.png" alt="Tomás Navarrete" width="200" height="200">
             </div>
             <h2 class="team-card-name">Tomás Navarrete</h2>
             <p class="team-card-role">Vice President, Board Member</p>
@@ -105,7 +109,7 @@
           <!-- Karin Treyer -->
           <article class="team-card">
             <div class="team-card-image">
-              <img src="../assets/images/Karin-circle.png" alt="Karin Treyer" width="200" height="200">
+              <img src="../assets/images/team/Karin-circle.png" alt="Karin Treyer" width="200" height="200">
             </div>
             <h2 class="team-card-name">Karin Treyer</h2>
             <p class="team-card-role">Board Member</p>
@@ -126,7 +130,7 @@
           <!-- João Gonçalves -->
           <article class="team-card">
             <div class="team-card-image">
-              <img src="../assets/images/Joao-circle.png" alt="João Gonçalves" width="200" height="200">
+              <img src="../assets/images/team/Joao-circle.png" alt="João Gonçalves" width="200" height="200">
             </div>
             <h2 class="team-card-name">João Gonçalves</h2>
             <p class="team-card-role">Board Member</p>
@@ -144,7 +148,7 @@
           <!-- Mélanie Douziech -->
           <article class="team-card">
             <div class="team-card-image">
-              <img src="../assets/images/Melanie-circle.png" alt="Mélanie Douziech" width="200" height="200">
+              <img src="../assets/images/team/Melanie-circle.png" alt="Mélanie Douziech" width="200" height="200">
             </div>
             <h2 class="team-card-name">Mélanie Douziech</h2>
             <p class="team-card-role">Board Member</p>
@@ -165,11 +169,11 @@
           <!-- Manuel Klarmann -->
           <article class="team-card">
             <div class="team-card-image">
-              <img src="../assets/images/Manuel-circle.png" alt="Manuel Klarmann" width="200" height="200">
+              <img src="../assets/images/team/Manuel-circle.png" alt="Manuel Klarmann" width="200" height="200">
             </div>
             <h2 class="team-card-name">Manuel Klarmann</h2>
             <p class="team-card-role">Board Member</p>
-            <p class="team-card-bio">Manuel combines entrepreneurial experience with technical knowledge of LCA and sustainability assessment. He is the founder and CEO of Eaternity and brings expertise in food sustainability assessment, tool development and carbon footprinting </p>
+            <p class="team-card-bio">Manuel combines entrepreneurial experience with technical knowledge of LCA and sustainability assessment. He is the founder and CEO of Eaternity and brings expertise in food sustainability assessment, tool development and carbon footprinting. </p>
             <div class="team-card-links">
               <a href="https://eaternity.org/about/" class="team-link" aria-label="Professional webpage" target="_blank" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -186,7 +190,7 @@
           <!-- Director -->
           <article class="team-card">
             <div class="team-card-image">
-              <img src="../assets/images/Xiaojin-Zhang.png" alt="Xiaojin Zhang" width="200" height="200">
+              <img src="../assets/images/team/Xiaojin-Zhang-circle.png" alt="Xiaojin Zhang" width="200" height="200">
             </div>
             <h2 class="team-card-name">Xiaojin Zhang</h2>
             <p class="team-card-role">Director</p>
@@ -204,12 +208,12 @@
           <!-- Open Call: You? -->
           <article class="team-card team-card-cta">
             <div class="team-card-image">
-              <img src="../assets/images/unknown-person.png" alt="Join our team" width="200" height="200">
+              <img src="../assets/images/team/unknown-person.png" alt="Join our team" width="200" height="200">
             </div>
             <h2 class="team-card-name">You?</h2>
             <p class="team-card-role">Senior Platform & Data Engineer</p>
-            <p class="team-card-bio">Are you passionate about open data, Brightway, or quantitative sustainability? We are always looking for brilliant minds to join the trail.</p>
-            <a href="/careers.html" class="btn-careers">View Careers</a>
+            <p class="team-card-bio">Are you passionate about open-source data and tools, the ecosystem and community we are supporting, and quantitative sustainability assessment? Then we are looking for you to join the trail.</p>
+            <a href="/careers/" class="btn-careers">View Careers</a>
           </article>
         </div>
       </div>
@@ -231,5 +235,6 @@
     </div>
   </footer>
 
+  <script src="../assets/js/script.js" defer></script>
 </body>
 </html>
