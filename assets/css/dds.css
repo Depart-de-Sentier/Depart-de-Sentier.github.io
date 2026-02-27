@@ -3,16 +3,8 @@
    DdS Brand Guidelines
    ============================================= */
 
-/* --- Brand Font --- */
-/* Place UrbaneRounded-Light.woff2 and UrbaneRounded-Light.woff in assets/fonts/ folder */
-@font-face {
-  font-family: 'Urbane Rounded Light';
-  src: url('../fonts/UrbaneRounded-Light.woff2') format('woff2'),
-       url('../fonts/UrbaneRounded-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+/* --- Brand Font (Open Source: Nunito) --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
 /* --- Brand Colors (CSS Variables) --- */
 :root {
@@ -40,8 +32,8 @@
 
 /* --- CSS Variables (continued) --- */
 :root {
-  --font-body: 'Urbane Rounded Light', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  --font-heading: 'Urbane Rounded Light', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-heading: 'Nunito', sans-serif;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -341,7 +333,7 @@ li {
 }
 
 .hero-typewriter {
-  font-family: 'Urbane Rounded Light', 'Urbane', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: 1.75rem;
   line-height: 1.3;
@@ -509,7 +501,7 @@ li {
 }
 
 .pillars-of-impact-title {
-  font-family: 'Urbane Rounded Light', var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 300;
   color: #2B2B2B;
@@ -548,7 +540,7 @@ li {
 
 .pillar-card-light h3 {
   color: #2B2B2B;
-  font-family: 'Urbane Rounded Light', var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 var(--space-md);
@@ -584,7 +576,7 @@ li {
 
 .pillar-card-dark h3 {
   color: #FFFFFF;
-  font-family: 'Urbane Rounded Light', var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 var(--space-md);
@@ -973,16 +965,58 @@ li {
 /* --- About Page: Ecosystem Split --- */
 .ecosystem {
   padding: var(--space-xl) 0;
-  background-color: var(--color-bg-subtle);
+  background-color: var(--color-primary-beige);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
 
 .ecosystem-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: var(--space-xl);
   align-items: center;
+}
+
+.ecosystem-image {
+  margin: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.ecosystem-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
+}
+
+.ecosystem-caption {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.ecosystem-caption a {
+  color: var(--color-text-muted);
+  border-bottom: 1px dotted var(--color-text-muted);
+}
+
+.ecosystem-caption a:hover {
+  color: var(--color-primary-dark-green);
+}
+
+.ecosystem-link {
+  font-weight: 700;
+  color: var(--color-primary-dark-green);
+  border-bottom: 1px solid var(--color-primary-dark-green);
+  transition: border-bottom-width 0.15s ease, color 0.15s ease;
+}
+
+.ecosystem-link:hover {
+  color: var(--color-primary-dark-green);
+  border-bottom: 2px solid var(--color-primary-dark-green);
 }
 
 .ecosystem-image-placeholder {
@@ -1006,11 +1040,16 @@ li {
 .ecosystem-content h2 {
   font-size: 2rem;
   margin-bottom: var(--space-md);
+  color: var(--color-dark-charcoal);
+  font-family: var(--font-heading);
 }
 
 .ecosystem-content p {
   font-size: 1.05rem;
   line-height: 1.8;
+  color: var(--color-dark-charcoal);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* --- About Page: Hub Sections (Team, Governance, Careers) --- */
@@ -1871,18 +1910,18 @@ li {
   background: #F0EEE1;
   border-left: 4px solid #84AE99;
   padding: 20px;
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: var(--font-body);
 }
 
 .contact-support-title {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.25rem;
   color: var(--color-primary-dark-green);
   margin: 0 0 var(--space-md);
 }
 
 .contact-support-text {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-dark-charcoal);
@@ -2464,7 +2503,7 @@ a.news-tag:hover {
 }
 
 .cfp-title {
-  font-family: 'Urbane Rounded Light', var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 300;
   color: var(--color-primary-dark-green);
@@ -2472,7 +2511,7 @@ a.news-tag:hover {
 }
 
 .cfp-intro {
-  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: 1.05rem;
   line-height: 1.75;
@@ -2501,7 +2540,7 @@ a.news-tag:hover {
 }
 
 .cfp-section-heading {
-  font-family: 'Urbane Rounded Light', var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-primary-dark-green);
@@ -2509,7 +2548,7 @@ a.news-tag:hover {
 }
 
 .cfp-list {
-  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: 1.05rem;
   line-height: 1.75;
@@ -2523,7 +2562,7 @@ a.news-tag:hover {
 }
 
 .cfp-text {
-  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: 1.05rem;
   line-height: 1.75;
@@ -2532,7 +2571,7 @@ a.news-tag:hover {
 }
 
 .cfp-closing {
-  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: 1.05rem;
   line-height: 1.75;
@@ -2549,7 +2588,7 @@ a.news-tag:hover {
 }
 
 .cfp-key-dates-heading {
-  font-family: 'Urbane Rounded Light', var(--font-heading);
+  font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--color-primary-dark-green);
@@ -2557,7 +2596,7 @@ a.news-tag:hover {
 }
 
 .cfp-key-dates-list {
-  font-family: 'Urbane Rounded Light', 'Urbane', var(--font-body);
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: 0.95rem;
   color: var(--color-dark-charcoal);

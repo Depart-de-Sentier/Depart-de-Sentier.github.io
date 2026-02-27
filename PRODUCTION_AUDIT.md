@@ -7,29 +7,15 @@
 
 ## 1. Font Fix — Urbane Rounded Light
 
-### Status: ⚠️ ACTION REQUIRED
+### Status: ✓ RESOLVED via pivot to Open Source (Nunito)
 
-**Current setup:** The `@font-face` in `assets/css/dds.css` references:
-- `../fonts/UrbaneRounded-Light.woff2`
-- `../fonts/UrbaneRounded-Light.woff`
+**Current setup:** The site now uses **Nunito** (Google Fonts), an Open Source font that aligns with the DdS mission. Font loaded via:
 
-**Issue:** The `assets/fonts/` folder exists but the font files are **not in the repository**. Without them, the browser falls back to system fonts (Inter, etc.), which can look different on production vs. local.
-
-**Action:** Upload these files to the `assets/fonts/` folder:
-1. **UrbaneRounded-Light.woff2** (preferred for modern browsers)
-2. **UrbaneRounded-Light.woff** (fallback)
-
-**@font-face code (already in dds.css):**
 ```css
-@font-face {
-  font-family: 'Urbane Rounded Light';
-  src: url('../fonts/UrbaneRounded-Light.woff2') format('woff2'),
-       url('../fonts/UrbaneRounded-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 ```
+
+**CSS variables:** `--font-body` and `--font-heading` are set to `'Nunito', sans-serif`.
 
 ---
 
@@ -39,9 +25,7 @@
 - `assets/css/` — stylesheets
 - `assets/js/` — scripts
 - `assets/images/` — images, logos, favicons
-- `assets/fonts/` — web fonts
-
-**Note:** `schools/feb-25` references `pexels-willianjusten-22484277.jpg` — this file is **not present** in `assets/images/`. Add it or update the reference to an existing image.
+- ~~`assets/fonts/`~~ — removed (font now via Google Fonts)
 
 ---
 
@@ -63,6 +47,7 @@ All image references match the exact filenames in the project:
 | Xiaojin-Zhang.png | Xiaojin-Zhang.png | ✓ |
 | Green Logo.svg | Green Logo.svg | ✓ |
 | quebec-city.jpg | quebec-city.jpg | ✓ |
+| pexels-willianjusten-22484277.jpg | pexels-willianjusten-22484277.jpg | ✓ |
 
 ---
 
@@ -92,8 +77,7 @@ This prevents the zoomed-out mobile layout.
 
 ## Summary Checklist
 
-- [ ] **Upload font files** to `assets/fonts/` (UrbaneRounded-Light.woff2, UrbaneRounded-Light.woff)
-- [ ] **Add pexels-willianjusten-22484277.jpg** to `assets/images/` for schools/feb-25, or update the reference
+- [x] **Font** — Resolved via pivot to Open Source (Nunito)
 - [x] Asset paths converted to relative where needed
 - [x] Case sensitivity verified
 - [x] CSS variables correct

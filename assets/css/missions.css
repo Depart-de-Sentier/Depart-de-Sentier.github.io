@@ -11,7 +11,7 @@
 
 /* --- Missions page overrides --- */
 .missions-page {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   background-color: var(--beige);
   color: var(--charcoal);
 }
@@ -31,7 +31,7 @@
 }
 
 .missions-hero h1 {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 2.25rem;
   font-weight: 300;
   margin: 0;
@@ -60,7 +60,7 @@
 .missions-content h2,
 .missions-content h3,
 .missions-content li {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: var(--charcoal);
 }
 
@@ -92,7 +92,7 @@
 
 /* --- Vision Statement --- */
 .vision-section {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-lg) 0;
 }
 
 .vision-inner {
@@ -102,7 +102,7 @@
 }
 
 .vision-title {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   color: var(--charcoal);
@@ -110,7 +110,7 @@
 }
 
 .vision-statement {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--charcoal);
@@ -147,7 +147,7 @@
 }
 
 .pillars-title {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.75rem;
   font-weight: 300;
   color: var(--charcoal);
@@ -184,7 +184,7 @@
 }
 
 .pillar-card h3 {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--primary-green);
@@ -192,7 +192,7 @@
 }
 
 .pillar-card p {
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--charcoal);
@@ -214,7 +214,7 @@
   padding: 0.75rem 1.75rem;
   background-color: var(--sage);
   color: white;
-  font-family: 'Urbane Rounded Light', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
