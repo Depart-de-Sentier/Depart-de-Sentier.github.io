@@ -66,7 +66,7 @@
     <!-- Section 1: Hero -->
     <section class="hero-about" aria-labelledby="hero-heading">
       <div class="site-container">
-        <h1 id="hero-heading">Democratizing Quantitative Sustainability Assessment.</h1>
+        <h1 id="hero-heading">Democratizing Quantitative Sustainability Assessment</h1>
         <p class="hero-sub">
           Départ de Sentier (DdS) is a Swiss non-profit association dedicated to advancing
           LCA-based quantitative sustainability assessment. We support the open-source community by:
@@ -110,15 +110,15 @@
     <section class="ecosystem" aria-labelledby="ecosystem-heading">
       <div class="site-container">
         <div class="ecosystem-grid">
-          <figure class="ecosystem-image">
-            <img src="../assets/images/brightway-ecosystem-diagram.png" alt="Mind-map of the Brightway open-source ecosystem showing DATABASE, WebApp, IN/OUT, VISUALIZATION, USER INTERFACE, INVENTORY, and ASSESSMENT components">
-            <figcaption class="ecosystem-caption">Source: <a href="https://docs.brightway.dev/en/latest/content/overview/ecosystem.html" target="_blank" rel="noopener noreferrer">Brightway open-source ecosystem</a></figcaption>
-          </figure>
           <div class="ecosystem-content">
             <h2 id="ecosystem-heading">The Open Sustainability Ecosystem</h2>
             <p>At the core of DdS is the <a href="https://docs.brightway.dev/en/latest/content/overview/ecosystem.html" class="ecosystem-link">Brightway open-source ecosystem</a>. We support this ecosystem to empower researchers, analysts, and developers in building the transparent, reproducible tools required for robust quantitative sustainability assessment.</p>
             <p>DdS exists to support the people behind the code. Through our specialized training schools and the annual Brightcon conference, we foster knowledge exchange and open dialogue, effectively bridging the gap between academic innovation and industrial practice. By celebrating community milestones with contributor awards, we are cultivating a future where world-class sustainability data and tools remain open, accessible, and community-driven.</p>
           </div>
+          <figure class="ecosystem-image">
+            <img src="../assets/images/brightway-ecosystem-diagram.png" alt="Mind-map of the Brightway open-source ecosystem showing DATABASE, WebApp, IN/OUT, VISUALIZATION, USER INTERFACE, INVENTORY, and ASSESSMENT components">
+            <figcaption class="ecosystem-caption">Source: <a href="https://docs.brightway.dev/en/latest/content/overview/ecosystem.html" target="_blank" rel="noopener noreferrer">Brightway open-source ecosystem</a></figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -129,15 +129,6 @@
       <div class="site-container">
         <div class="about-hub-team-grid">
           <div class="about-hub-team-content">
-            <figure class="about-hub-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <ellipse cx="32" cy="40" rx="20" ry="8"/>
-                <ellipse cx="32" cy="36" rx="14" ry="6"/>
-                <ellipse cx="32" cy="32" rx="8" ry="4"/>
-                <ellipse cx="32" cy="28" rx="4" ry="2"/>
-                <circle cx="32" cy="26" r="2"/>
-              </svg>
-            </figure>
             <h2 id="team-heading">The Team</h2>
             <p>Our core team combines world-leading expertise in LCA methodology, Brightway and open-source sustainability tools, Python development, and data engineering. We bridge academic rigor with practical application to advance transparent, reproducible environmental assessment.</p>
           </div>
@@ -151,10 +142,14 @@
     <!-- Section 5: Governance & Transparency -->
     <section class="about-hub about-hub-governance" aria-labelledby="governance-heading">
       <div class="site-container">
-        <div class="about-hub-governance-content">
-          <h2 id="governance-heading">Governance & Transparency</h2>
-          <p>Départ de Sentier is a Swiss non-profit association (VAT CHE-329.638.515) registered in Aargau. Our legal and financial management is fully transparent — bylaws, annual reports, and financial statements are version-controlled and publicly accessible on GitHub.</p>
-          <a href="governance.html" class="btn-accent btn-accent-light">Learn More</a>
+        <div class="about-hub-governance-layout">
+          <div class="about-hub-governance-content">
+            <h2 id="governance-heading">Governance & Transparency</h2>
+            <p>Départ de Sentier is a Swiss non-profit association (VAT CHE-329.638.515) registered in Aargau. Our legal and financial management is fully transparent — bylaws, annual reports, and financial statements are version-controlled and publicly accessible on GitHub.</p>
+          </div>
+          <div class="about-hub-governance-btn">
+            <a href="governance.html" class="btn-accent btn-accent-light">Learn More</a>
+          </div>
         </div>
       </div>
     </section>
@@ -163,20 +158,14 @@
     <section class="about-hub about-hub-careers" aria-labelledby="careers-heading">
       <div class="about-hub-pattern about-hub-pattern-topo" aria-hidden="true"></div>
       <div class="site-container">
-        <div class="about-hub-careers-inner">
-          <figure class="about-hub-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 60 Q16 50 32 54 T60 60"/>
-              <path d="M8 52 Q20 42 32 46 T56 52"/>
-              <path d="M12 44 Q24 34 32 38 T52 44"/>
-              <path d="M18 36 Q26 28 32 30 T46 36"/>
-              <path d="M24 28 Q28 22 32 24 T40 28"/>
-              <circle cx="32" cy="22" r="4"/>
-            </svg>
-          </figure>
-          <h2 id="careers-heading">Careers</h2>
-          <p>We are an ambitious, mission-driven association seeking sustainability advocates who are proficient in open-source development and data analysis, and thrive in an open and diverse community and is determined to transform the field of sustainability assessment.</p>
-          <a href="/careers/" class="btn-accent">View Openings</a>
+        <div class="about-hub-team-grid">
+          <div class="about-hub-careers-inner">
+            <h2 id="careers-heading">Careers</h2>
+            <p>We are an ambitious, mission-driven association seeking sustainability advocates who are proficient in open-source development and data analysis, and thrive in an open and diverse community and is determined to transform the field of sustainability assessment.</p>
+          </div>
+          <div class="about-hub-team-cta">
+            <a href="/careers/" class="btn-accent">View Openings</a>
+          </div>
         </div>
       </div>
     </section>
@@ -194,6 +183,7 @@
         </div>
         <ul class="footer-links">
           <li><a href="https://github.com/Depart-de-Sentier" class="footer-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/d%C3%A9part-de-sentier/" class="footer-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
         </ul>
       </div>
     </div>
