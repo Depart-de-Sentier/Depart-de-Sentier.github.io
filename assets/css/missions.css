@@ -135,9 +135,9 @@
 
 .pillars-inner {
   position: relative;
-  max-width: 900px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 0 var(--space-xl);
+  padding: 0 var(--space-lg);
 }
 
 .pillars-section::before,
@@ -147,12 +147,9 @@
 }
 
 .pillars-title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.75rem;
-  font-weight: 300;
-  color: var(--charcoal);
   text-align: center;
-  margin: 0 0 var(--space-xl);
+  max-width: 780px;
+  margin: 0 auto var(--space-xl);
 }
 
 .pillars-grid {
