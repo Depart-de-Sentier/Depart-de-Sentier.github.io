@@ -1,3 +1,36 @@
+/* --- Page Transitions --- */
+(function () {
+  // Remove fade-out on page show (handles browser back/forward cache)
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) document.body.classList.remove('fade-out');
+  });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+
+    var href = a.getAttribute('href');
+    if (!href) return;
+
+    // Skip: new-tab, hash-only, external, special protocols, modifier keys
+    if (
+      a.target === '_blank' ||
+      href.startsWith('#') ||
+      href.startsWith('mailto:') ||
+      href.startsWith('tel:') ||
+      href.startsWith('http://') ||
+      href.startsWith('https://') ||
+      e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
+    ) return;
+
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(function () {
+      window.location.href = href;
+    }, 300);
+  });
+})();
+
 /* --- Hamburger Nav Menu --- */
 (function () {
   const hamburger = document.querySelector('.nav-hamburger');

@@ -11,6 +11,10 @@
   /* DdS Brand Palette */
   --color-primary-dark-green: #3C5343;
   --color-primary-beige: #F0EEE1;
+
+  /* Shorthand aliases */
+  --primary-dark-green: #3C5343;
+  --primary-beige: #F0EEE1;
   --color-accent-sage: #84AE99;
   --color-dark-charcoal: #2B2B2B;
 
@@ -45,6 +49,29 @@
   --max-width: 1080px;
   --border-radius: 8px;
   --transition: 0.2s ease;
+}
+
+/* --- Page Transitions --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.fade-out main {
+  animation: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* --- Reset & Base --- */
@@ -2047,10 +2074,58 @@ li {
 
 .news-trail {
   max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
 .news-item {
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-primary-beige);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.news-item-date {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-dark-charcoal);
+  opacity: 0.7;
+  letter-spacing: 0.05rem;
+  margin: 0 0 var(--space-xs);
+}
+
+/* --- Individual article date header --- */
+.news-article-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 700px) {
+  .news-article-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}
+
+.news-article-date-container {
+  border-left: 2px solid var(--color-accent-sage);
+  padding-left: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.news-article-date {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-dark-charcoal);
+  opacity: 0.7;
+  letter-spacing: 0.05rem;
+  white-space: nowrap;
 }
 
 .news-tag {
@@ -2104,11 +2179,14 @@ a.news-tag:hover {
   font-weight: 600;
   color: var(--color-primary-dark-green);
   text-decoration: none;
-  transition: color var(--transition);
+  transition: color var(--transition), text-decoration-color var(--transition);
 }
 
 .news-item-link:hover {
-  color: var(--color-accent-sage);
+  color: var(--color-primary-dark-green);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .news-trail-divider {
