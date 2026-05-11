@@ -42,6 +42,7 @@
           <a href="/about/" class="nav-dropdown-toggle">About</a>
           <ul class="nav-dropdown-menu">
             <li><a href="#pillars-heading">Mission</a></li>
+            <li><a href="#ecosystem-heading">The Ecosystem</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="governance.html">Governance</a></li>
             <li><a href="/careers/">Careers</a></li>
@@ -112,7 +113,7 @@
       <div class="site-container">
         <div class="ecosystem-grid">
           <div class="ecosystem-content">
-            <h2 id="ecosystem-heading">The Open Sustainability Ecosystem</h2>
+            <h2 id="ecosystem-heading">The Ecosystem</h2>
             <p>At the core of DdS is the <a href="https://docs.brightway.dev/en/latest/content/overview/ecosystem.html" class="ecosystem-link">Brightway open-source ecosystem</a>. We support this ecosystem to empower researchers, analysts, and developers in building the transparent, reproducible tools required for robust quantitative sustainability assessment.</p>
             <p>DdS exists to support the people behind the code. Through our specialized training schools and the annual Brightcon conference, we foster knowledge exchange and open dialogue, effectively bridging the gap between academic innovation and industrial practice. By celebrating community milestones with contributor awards, we are cultivating a future where world-class sustainability data and tools remain open, accessible, and community-driven.</p>
           </div>
@@ -404,5 +405,33 @@
 
   <script src="../assets/js/script.js" defer></script>
   <script src="../assets/js/ecosystem-diagram.js" defer></script>
+  <script>
+    (function () {
+      function centerPillars() {
+        var el = document.getElementById('pillars-heading');
+        if (el) {
+          var top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }
+
+      // Arriving from another page with #pillars-heading in the URL
+      if (window.location.hash === '#pillars-heading') {
+        window.addEventListener('load', function () {
+          setTimeout(centerPillars, 50);
+        });
+      }
+
+      // Clicking a Mission link while already on the About page
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href="#pillars-heading"]');
+        if (a) {
+          e.preventDefault();
+          centerPillars();
+          history.pushState(null, '', '#pillars-heading');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,3 +1,21 @@
+/* ── Ecosystem section spacing overrides ─────────────────────── */
+.ecosystem {
+  padding: var(--space-xs) 0;
+}
+
+.ecosystem-grid {
+  gap: 0.25rem;
+}
+
+.ecosystem-content p {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.ecosystem-content h2 {
+  margin-bottom: 0.5rem;
+}
+
 /* ── Interactive Brightway Ecosystem Diagram ──────────────────── */
 
 .eco-svg-wrapper {
