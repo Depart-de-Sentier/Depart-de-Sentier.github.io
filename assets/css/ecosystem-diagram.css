@@ -160,6 +160,18 @@
   margin: 0 0 18px;
 }
 
+.eco-modal p a {
+  color: #3C5343;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+.eco-modal p a:hover {
+  color: #84AE99;
+}
+
 /* ── Modal links ──────────────────────────────────────────────── */
 .eco-modal-links {
   display: flex;

@@ -222,7 +222,7 @@
       category: 'ui',
       categoryLabel: 'USER INTERFACE',
       tooltip: 'Browser-based web application for exploring Brightway LCA databases and running calculations.',
-      description: 'firefly is a web application developed by Eaternity that provides a graphical browser-based interface for Brightway LCA databases. It allows users to browse inventory data, run Life Cycle Assessment calculations, and visualise results without any Python programming, making Brightway accessible to a broader audience.',
+      description: 'firefly is a web application started from the Hackathon in <a href="https://indico.d-d-s.ch/event/1/" target="_blank" rel="noopener noreferrer">Brightcon 2025</a>, and further developed by <a href="https://eaternity.org" target="_blank" rel="noopener noreferrer">Eaternity AG</a> that provides a graphical browser-based interface for Brightway. It allows users to browse and build inventory data, run Life Cycle Assessment calculations, and visualise results without any Python programming, making Brightway accessible to a broader audience.',
       github: 'https://gitlab.com/eaternity/firefly',
       docs: 'https://brightway.eaternity.ch'
     },
@@ -356,7 +356,7 @@
     modalCat.textContent = data.categoryLabel;
     modalCat.className   = 'eco-modal-category cat-' + data.category;
     modalTitle.textContent = data.label;
-    modalDesc.textContent  = data.description;
+    modalDesc.innerHTML = data.description;
 
     modalLinks.innerHTML = '';
     if (data.github) {
