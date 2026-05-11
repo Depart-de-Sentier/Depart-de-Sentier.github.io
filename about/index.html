@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="../assets/css/dds.css">
   <link rel="stylesheet" href="../assets/css/missions.css">
+  <link rel="stylesheet" href="../assets/css/ecosystem-diagram.css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
@@ -116,9 +117,220 @@
             <p>DdS exists to support the people behind the code. Through our specialized training schools and the annual Brightcon conference, we foster knowledge exchange and open dialogue, effectively bridging the gap between academic innovation and industrial practice. By celebrating community milestones with contributor awards, we are cultivating a future where world-class sustainability data and tools remain open, accessible, and community-driven.</p>
           </div>
           <figure class="ecosystem-image">
-            <img src="../assets/images/brightway-ecosystem-diagram.png" alt="Mind-map of the Brightway open-source ecosystem showing DATABASE, WebApp, IN/OUT, VISUALIZATION, USER INTERFACE, INVENTORY, and ASSESSMENT components">
-            <figcaption class="ecosystem-caption">Source: <a href="https://docs.brightway.dev/en/latest/content/overview/ecosystem.html" target="_blank" rel="noopener noreferrer">Brightway open-source ecosystem</a></figcaption>
+            <div class="eco-svg-wrapper">
+              <svg viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg"
+                   class="eco-svg" role="img"
+                   aria-label="Interactive mind-map of the Brightway open-source LCA ecosystem. Click any node to learn more.">
+
+                <!-- background -->
+                <rect width="960" height="520" fill="#f4f3ec" rx="8"/>
+
+                <!-- ── CONNECTION LINES ──────────────────────────── -->
+                <!-- center → categories (thicker) -->
+                <line x1="480" y1="258" x2="258" y2="158" stroke="#9468C8" stroke-width="2.5" opacity="0.65"/>
+                <line x1="480" y1="258" x2="418" y2="80"  stroke="#C84030" stroke-width="2.5" opacity="0.65"/>
+                <line x1="480" y1="258" x2="600" y2="120" stroke="#C83870" stroke-width="2.5" opacity="0.65"/>
+                <line x1="480" y1="258" x2="678" y2="248" stroke="#8A8C10" stroke-width="2.5" opacity="0.65"/>
+                <line x1="480" y1="258" x2="670" y2="322" stroke="#C87010" stroke-width="2.5" opacity="0.65"/>
+                <line x1="480" y1="258" x2="490" y2="400" stroke="#A82878" stroke-width="2.5" opacity="0.65"/>
+                <line x1="480" y1="258" x2="255" y2="345" stroke="#4E8C18" stroke-width="2.5" opacity="0.65"/>
+
+                <!-- DATABASE → tools -->
+                <line x1="258" y1="158" x2="130" y2="90"  stroke="#9468C8" stroke-width="1.5" opacity="0.45"/>
+                <line x1="258" y1="158" x2="128" y2="165" stroke="#9468C8" stroke-width="1.5" opacity="0.45"/>
+                <line x1="258" y1="158" x2="268" y2="262" stroke="#9468C8" stroke-width="1.5" opacity="0.45"/>
+
+                <!-- WebApp → tools -->
+                <line x1="418" y1="80"  x2="330" y2="38"  stroke="#C84030" stroke-width="1.5" opacity="0.45"/>
+
+                <!-- IN/OUT → tools -->
+                <line x1="600" y1="120" x2="580" y2="50"  stroke="#C83870" stroke-width="1.5" opacity="0.45"/>
+                <line x1="600" y1="120" x2="730" y2="68"  stroke="#C83870" stroke-width="1.5" opacity="0.45"/>
+                <line x1="600" y1="120" x2="760" y2="150" stroke="#C83870" stroke-width="1.5" opacity="0.45"/>
+                <line x1="600" y1="120" x2="760" y2="210" stroke="#C83870" stroke-width="1.5" opacity="0.45"/>
+
+                <!-- VISUALIZATION → tools -->
+                <line x1="678" y1="248" x2="840" y2="190" stroke="#8A8C10" stroke-width="1.5" opacity="0.45"/>
+                <line x1="678" y1="248" x2="840" y2="278" stroke="#8A8C10" stroke-width="1.5" opacity="0.45"/>
+
+                <!-- USER INTERFACE → tools -->
+                <line x1="670" y1="322" x2="826" y2="378" stroke="#C87010" stroke-width="1.5" opacity="0.45"/>
+                <line x1="670" y1="322" x2="730" y2="425" stroke="#C87010" stroke-width="1.5" opacity="0.45"/>
+
+                <!-- INVENTORY → tools -->
+                <line x1="490" y1="400" x2="648" y2="418" stroke="#A82878" stroke-width="1.5" opacity="0.45"/>
+                <line x1="490" y1="400" x2="590" y2="460" stroke="#A82878" stroke-width="1.5" opacity="0.45"/>
+                <line x1="490" y1="400" x2="488" y2="468" stroke="#A82878" stroke-width="1.5" opacity="0.45"/>
+                <line x1="490" y1="400" x2="378" y2="440" stroke="#A82878" stroke-width="1.5" opacity="0.45"/>
+
+                <!-- ASSESSMENT → tools -->
+                <line x1="255" y1="345" x2="435" y2="340" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
+                <line x1="255" y1="345" x2="282" y2="425" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
+                <line x1="255" y1="345" x2="172" y2="438" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
+                <line x1="255" y1="345" x2="118" y2="368" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
+                <line x1="255" y1="345" x2="88"  y2="280" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
+                <line x1="255" y1="345" x2="148" y2="208" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
+
+                <!-- ── TOOL NODES ────────────────────────────────── -->
+
+                <!-- DATABASE tools -->
+                <g class="eco-node eco-tool" data-id="scenariolink" tabindex="0" role="button" aria-label="ScenarioLink">
+                  <rect x="77"  y="77"  width="106" height="26" rx="13" fill="#C8A8E0"/>
+                  <text x="130" y="90"  text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">ScenarioLink</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="bw2data" tabindex="0" role="button" aria-label="bw2data">
+                  <rect x="89"  y="152" width="78"  height="26" rx="13" fill="#C8A8E0"/>
+                  <text x="128" y="165" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">bw2data</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="bw_processing" tabindex="0" role="button" aria-label="bw_processing">
+                  <rect x="212" y="249" width="112" height="26" rx="13" fill="#C8A8E0"/>
+                  <text x="268" y="262" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">bw_processing</text>
+                </g>
+
+                <!-- WebApp tools -->
+                <g class="eco-node eco-tool" data-id="panel_webapp" tabindex="0" role="button" aria-label="Panel WebApp">
+                  <rect x="277" y="25"  width="106" height="26" rx="13" fill="#EBA898"/>
+                  <text x="330" y="38"  text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">Panel WebApp</text>
+                </g>
+
+                <!-- IN/OUT tools -->
+                <g class="eco-node eco-tool" data-id="ecoinvent_interface" tabindex="0" role="button" aria-label="ecoinvent_interface">
+                  <rect x="506" y="37"  width="148" height="26" rx="13" fill="#F0A0C0"/>
+                  <text x="580" y="50"  text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">ecoinvent_interface</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="brightpath" tabindex="0" role="button" aria-label="brightpath">
+                  <rect x="685" y="55"  width="90"  height="26" rx="13" fill="#F0A0C0"/>
+                  <text x="730" y="68"  text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">brightpath</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="bw2io" tabindex="0" role="button" aria-label="bw2io">
+                  <rect x="730" y="137" width="60"  height="26" rx="13" fill="#F0A0C0"/>
+                  <text x="760" y="150" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">bw2io</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="unfold" tabindex="0" role="button" aria-label="unfold">
+                  <rect x="727" y="197" width="66"  height="26" rx="13" fill="#F0A0C0"/>
+                  <text x="760" y="210" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">unfold</text>
+                </g>
+
+                <!-- VISUALIZATION tools -->
+                <g class="eco-node eco-tool" data-id="polyviz" tabindex="0" role="button" aria-label="polyviz">
+                  <rect x="804" y="177" width="72"  height="26" rx="13" fill="#E0E060"/>
+                  <text x="840" y="190" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">polyviz</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="bw2analyzer" tabindex="0" role="button" aria-label="bw2analyzer">
+                  <rect x="791" y="265" width="98"  height="26" rx="13" fill="#E0E060"/>
+                  <text x="840" y="278" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">bw2analyzer</text>
+                </g>
+
+                <!-- USER INTERFACE tools -->
+                <g class="eco-node eco-tool" data-id="activity_browser" tabindex="0" role="button" aria-label="Activity Browser">
+                  <rect x="763" y="365" width="126" height="26" rx="13" fill="#F5C870"/>
+                  <text x="826" y="378" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">Activity Browser</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="firefly" tabindex="0" role="button" aria-label="firefly">
+                  <rect x="694" y="412" width="72" height="26" rx="13" fill="#F5C870"/>
+                  <text x="730" y="425" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">firefly</text>
+                </g>
+
+                <!-- INVENTORY tools -->
+                <g class="eco-node eco-tool" data-id="futura" tabindex="0" role="button" aria-label="futura">
+                  <rect x="615" y="405" width="66"  height="26" rx="13" fill="#EE80C0"/>
+                  <text x="648" y="418" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">futura</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="premise" tabindex="0" role="button" aria-label="premise">
+                  <rect x="554" y="447" width="72"  height="26" rx="13" fill="#EE80C0"/>
+                  <text x="590" y="460" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">premise</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="ocelot" tabindex="0" role="button" aria-label="ocelot">
+                  <rect x="455" y="455" width="66"  height="26" rx="13" fill="#EE80C0"/>
+                  <text x="488" y="468" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">ocelot</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="wurst" tabindex="0" role="button" aria-label="wurst">
+                  <rect x="348" y="427" width="60"  height="26" rx="13" fill="#EE80C0"/>
+                  <text x="378" y="440" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">wurst</text>
+                </g>
+
+                <!-- ASSESSMENT tools -->
+                <g class="eco-node eco-tool" data-id="lca_algebraic" tabindex="0" role="button" aria-label="lca_algebraic">
+                  <rect x="379" y="327" width="112" height="26" rx="13" fill="#B8DE80"/>
+                  <text x="435" y="340" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">lca_algebraic</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="bw2calc" tabindex="0" role="button" aria-label="bw2calc">
+                  <rect x="246" y="412" width="72"  height="26" rx="13" fill="#B8DE80"/>
+                  <text x="282" y="425" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">bw2calc</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="pathways" tabindex="0" role="button" aria-label="pathways">
+                  <rect x="133" y="425" width="78"  height="26" rx="13" fill="#B8DE80"/>
+                  <text x="172" y="438" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">pathways</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="bw_timex" tabindex="0" role="button" aria-label="bw_timex">
+                  <rect x="79"  y="355" width="78"  height="26" rx="13" fill="#B8DE80"/>
+                  <text x="118" y="368" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">bw_timex</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="bw2regional" tabindex="0" role="button" aria-label="bw2regional">
+                  <rect x="39"  y="267" width="98"  height="26" rx="13" fill="#B8DE80"/>
+                  <text x="88"  y="280" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">bw2regional</text>
+                </g>
+                <g class="eco-node eco-tool" data-id="bw_temporalis" tabindex="0" role="button" aria-label="bw_temporalis">
+                  <rect x="92"  y="195" width="112" height="26" rx="13" fill="#B8DE80"/>
+                  <text x="148" y="208" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">bw_temporalis</text>
+                </g>
+
+                <!-- ── CATEGORY NODES ─────────────────────────────── -->
+                <g class="eco-node eco-category" data-id="cat-database" tabindex="0" role="button" aria-label="DATABASE cluster">
+                  <rect x="194" y="143" width="128" height="30" rx="15" fill="#9468C8"/>
+                  <text x="258" y="158" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold" fill="white">DATABASE</text>
+                </g>
+                <g class="eco-node eco-category" data-id="cat-webapp" tabindex="0" role="button" aria-label="WebApp cluster">
+                  <rect x="364" y="65"  width="108" height="30" rx="15" fill="#C84030"/>
+                  <text x="418" y="80"  text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold" fill="white">WebApp</text>
+                </g>
+                <g class="eco-node eco-category" data-id="cat-inout" tabindex="0" role="button" aria-label="IN/OUT cluster">
+                  <rect x="544" y="105" width="112" height="30" rx="15" fill="#C83870"/>
+                  <text x="600" y="120" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold" fill="white">IN/OUT</text>
+                </g>
+                <g class="eco-node eco-category" data-id="cat-visualization" tabindex="0" role="button" aria-label="VISUALIZATION cluster">
+                  <rect x="602" y="233" width="152" height="30" rx="15" fill="#A8A818"/>
+                  <text x="678" y="248" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold" fill="#2B2B2B">VISUALIZATION</text>
+                </g>
+                <g class="eco-node eco-category" data-id="cat-ui" tabindex="0" role="button" aria-label="USER INTERFACE cluster">
+                  <rect x="590" y="307" width="160" height="30" rx="15" fill="#C87010"/>
+                  <text x="670" y="322" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold" fill="white">USER INTERFACE</text>
+                </g>
+                <g class="eco-node eco-category" data-id="cat-inventory" tabindex="0" role="button" aria-label="INVENTORY cluster">
+                  <rect x="426" y="385" width="128" height="30" rx="15" fill="#A82878"/>
+                  <text x="490" y="400" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold" fill="white">INVENTORY</text>
+                </g>
+                <g class="eco-node eco-category" data-id="cat-assessment" tabindex="0" role="button" aria-label="ASSESSMENT cluster">
+                  <rect x="182" y="330" width="146" height="30" rx="15" fill="#4E8C18"/>
+                  <text x="255" y="345" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold" fill="white">ASSESSMENT</text>
+                </g>
+
+                <!-- ── CENTER NODE ────────────────────────────────── -->
+                <g class="eco-node eco-center" data-id="brightway" tabindex="0" role="button" aria-label="Brightway core framework">
+                  <circle cx="480" cy="258" r="42" fill="#3548CC"/>
+                  <text x="480" y="258" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="bold" fill="white">Brightway</text>
+                </g>
+
+              </svg>
+            </div>
+            <figcaption class="ecosystem-caption">
+              Click any node to learn more &middot; Interactive overview diagram developed based on <a href="https://docs.brightway.dev/en/latest/content/overview/ecosystem.html" target="_blank" rel="noopener noreferrer">Brightway open-source ecosystem</a>
+            </figcaption>
           </figure>
+
+          <!-- Tooltip (populated by JS) -->
+          <div id="eco-tooltip" class="eco-tooltip" role="tooltip" aria-hidden="true"></div>
+
+          <!-- Modal (populated by JS) -->
+          <div id="eco-modal-overlay" class="eco-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="eco-modal-title">
+            <div class="eco-modal">
+              <button id="eco-modal-close" class="eco-modal-close" aria-label="Close">&times;</button>
+              <span id="eco-modal-category" class="eco-modal-category"></span>
+              <h3 id="eco-modal-title"></h3>
+              <p id="eco-modal-desc"></p>
+              <div id="eco-modal-links" class="eco-modal-links"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -191,5 +403,6 @@
   </footer>
 
   <script src="../assets/js/script.js" defer></script>
+  <script src="../assets/js/ecosystem-diagram.js" defer></script>
 </body>
 </html>
