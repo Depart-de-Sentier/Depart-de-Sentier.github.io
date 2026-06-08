@@ -126,6 +126,9 @@
                 <!-- background -->
                 <rect width="960" height="520" fill="#f4f3ec" rx="8"/>
 
+                <!-- ── Caption (top-left) ────────────────────────── -->
+                <text x="10" y="14" font-size="9" font-family="Nunito, sans-serif" fill="#888">Click any node to learn more · Interactive overview diagram developed based on <a href="https://docs.brightway.dev/en/latest/content/overview/ecosystem.html" target="_blank" rel="noopener noreferrer"><tspan fill="#3C5343" text-decoration="underline">Brightway open-source ecosystem</tspan></a></text>
+
                 <!-- ── CONNECTION LINES ──────────────────────────── -->
                 <!-- center → categories (thicker) -->
                 <line x1="480" y1="258" x2="258" y2="158" stroke="#9468C8" stroke-width="2.5" opacity="0.65"/>
@@ -171,6 +174,7 @@
                 <line x1="255" y1="345" x2="118" y2="368" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
                 <line x1="255" y1="345" x2="88"  y2="280" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
                 <line x1="255" y1="345" x2="148" y2="208" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
+                <line x1="255" y1="345" x2="363" y2="395" stroke="#4E8C18" stroke-width="1.5" opacity="0.45"/>
 
                 <!-- ── TOOL NODES ────────────────────────────────── -->
 
@@ -251,6 +255,10 @@
                 </g>
 
                 <!-- ASSESSMENT tools -->
+                <g class="eco-node eco-tool" data-id="edges" tabindex="0" role="button" aria-label="edges">
+                  <rect x="330" y="382" width="66"  height="26" rx="13" fill="#B8DE80"/>
+                  <text x="363" y="395" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">edges</text>
+                </g>
                 <g class="eco-node eco-tool" data-id="lca_algebraic" tabindex="0" role="button" aria-label="lca_algebraic">
                   <rect x="379" y="327" width="112" height="26" rx="13" fill="#B8DE80"/>
                   <text x="435" y="340" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#2B2B2B">lca_algebraic</text>
@@ -314,9 +322,6 @@
 
               </svg>
             </div>
-            <figcaption class="ecosystem-caption">
-              Click any node to learn more &middot; Interactive overview diagram developed based on <a href="https://docs.brightway.dev/en/latest/content/overview/ecosystem.html" target="_blank" rel="noopener noreferrer">Brightway open-source ecosystem</a>
-            </figcaption>
           </figure>
 
           <!-- Tooltip (populated by JS) -->
@@ -407,28 +412,39 @@
   <script src="../assets/js/ecosystem-diagram.js" defer></script>
   <script>
     (function () {
-      function centerPillars() {
-        var el = document.getElementById('pillars-heading');
-        if (el) {
-          var top = el.getBoundingClientRect().top + window.pageYOffset - 80;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-        }
+      var SECTIONS = {
+        '#pillars-heading':  { cleanUrl: '/about/mission',    offset: 80 },
+        '#ecosystem-heading': { cleanUrl: '/about/ecosystem', offset: 80 }
+      };
+
+      function scrollTo(id, offset) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
       }
 
-      // Arriving from another page with #pillars-heading in the URL
-      if (window.location.hash === '#pillars-heading') {
+      // Arriving via redirect (e.g. from /about/mission → /about/#pillars-heading)
+      var hash = window.location.hash;
+      if (SECTIONS[hash]) {
         window.addEventListener('load', function () {
-          setTimeout(centerPillars, 50);
+          setTimeout(function () {
+            scrollTo(hash.slice(1), SECTIONS[hash].offset);
+            history.replaceState(null, '', SECTIONS[hash].cleanUrl);
+          }, 50);
         });
       }
 
-      // Clicking a Mission link while already on the About page
+      // Same-page anchor clicks (Mission / The Ecosystem in the nav)
       document.addEventListener('click', function (e) {
-        var a = e.target.closest('a[href="#pillars-heading"]');
-        if (a) {
-          e.preventDefault();
-          centerPillars();
-          history.pushState(null, '', '#pillars-heading');
+        for (var anchor in SECTIONS) {
+          var a = e.target.closest('a[href="' + anchor + '"]');
+          if (a) {
+            e.preventDefault();
+            scrollTo(anchor.slice(1), SECTIONS[anchor].offset);
+            history.pushState(null, '', SECTIONS[anchor].cleanUrl);
+            return;
+          }
         }
       });
     })();

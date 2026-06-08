@@ -216,6 +216,15 @@
       github: 'https://github.com/brightway-lca/bw_temporalis',
       docs: 'https://bw-temporalis.readthedocs.io'
     },
+    edges: {
+      label: 'edges',
+      category: 'assessment',
+      categoryLabel: 'ASSESSMENT',
+      tooltip: 'Edge-based LCIA applying characterization factors directly to exchanges for context-sensitive impact assessment.',
+      description: 'Unlike traditional LCIA methods that apply characterization factors (CFs) solely to nodes (e.g., elementary flows), edges applies CFs directly on the edges — the exchanges between suppliers and consumers — allowing for more precise and context-sensitive impact characterization.',
+      github: 'https://github.com/Laboratory-for-Energy-Systems-Analysis/edges',
+      docs: 'https://github.com/Laboratory-for-Energy-Systems-Analysis/edges'
+    },
 
     firefly: {
       label: 'firefly',
