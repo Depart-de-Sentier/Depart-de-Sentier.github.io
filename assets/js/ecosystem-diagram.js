@@ -91,6 +91,15 @@
       github: 'https://github.com/romainsacchi/brightpath',
       docs: null
     },
+    rosetta: {
+      label: 'rosetta',
+      category: 'inout',
+      categoryLabel: 'IN/OUT',
+      tooltip: 'Converts and harmonizes LCA data between SimaPro, ecospold2 XML, and multiple ecoinvent versions.',
+      description: 'Rosetta converts and harmonizes life cycle assessment data between SimaPro, ecospold2 XML, and multiple ecoinvent database versions.',
+      github: 'https://github.com/CedricFurrer/rosetta',
+      docs: null
+    },
 
     /* ── VISUALIZATION ─────────────────────────────────────────── */
     polyviz: {
