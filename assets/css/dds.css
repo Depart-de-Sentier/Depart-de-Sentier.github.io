@@ -1258,6 +1258,13 @@ li {
   color: var(--color-primary-dark-green);
 }
 
+/* Sentier Platform: Full-width Primary Dark Green */
+.about-hub-platform {
+  background-color: var(--color-primary-dark-green);
+  color: white;
+  padding: var(--space-2xl) 0;
+}
+
 /* Governance: Full-width Primary Dark Green */
 .about-hub-governance {
   background-color: var(--color-primary-dark-green);

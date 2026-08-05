@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="canonical" href="https://www.d-d-s.ch/about/sentier-platform.html">
+  <title>Sentier Platform | Départ de Sentier</title>
+  <meta name="description" content="Architecture of the Sentier platform: an open-source LCA data platform covering import, shared vocabulary, models, inventories, and LCIA methods.">
+  <meta name="author" content="Départ de Sentier">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/dds.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    .sp-main { padding: var(--space-2xl) 0; }
+    .sp-header { max-width: 780px; margin: 0 0 var(--space-lg); }
+    .sp-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-sage); margin-bottom: 6px; }
+    .sp-lead { font-size: 1.05rem; line-height: 1.8; color: var(--color-text-secondary); max-width: 680px; }
+    .sp-diagram-scroll { overflow: hidden; padding-bottom: var(--space-md); }
+    .sp-diagram { position: relative; width: 1340px; height: 640px; font-family: var(--font-body); transform-origin: top left; }
+    .sp-node { text-decoration: none; color: inherit; cursor: pointer; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+    .sp-node:hover { border-color: var(--color-accent-sage); box-shadow: 0 8px 24px rgba(60,83,67,.15); transform: translateY(-2px); }
+    .sp-gh-icon { position: absolute; top: 8px; right: 8px; color: var(--color-accent-sage); display: flex; }
+  </style>
+</head>
+<body class="sentier-platform-page">
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="site-container">
+      <a href="/">
+        <img src="../assets/images/logos/Green Logo.svg" alt="Départ de Sentier" class="nav-logo">
+      </a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li class="nav-dropdown nav-dropdown-about">
+          <a href="/about/" class="nav-dropdown-toggle">About</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="/about/mission">Mission</a></li>
+            <li><a href="/about/ecosystem">The Ecosystem</a></li>
+            <li><a href="sentier-platform.html">Sentier Platform</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="governance.html">Governance</a></li>
+            <li><a href="/careers/">Careers</a></li>
+          </ul>
+        </li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li class="nav-dropdown nav-dropdown-events">
+          <a href="/events/" class="nav-dropdown-toggle">Events</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="/events/brightcon.html">Brightcon</a></li>
+            <li><a href="/schools/">Schools</a></li>
+          </ul>
+        </li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="https://events.d-d-s.ch/">Become a Member</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="sp-main">
+    <div class="site-container">
+
+      <div class="sp-header">
+        <h1>Sentier platform</h1>
+        <div class="sp-eyebrow">Open-source LCA data platform</div>
+        <p class="sp-lead">Construction, publication, sharing and continuous improving of life cycle inventory data — from import through shared vocabulary to models, inventories, and LCIA methods.</p>
+      </div>
+
+      <div class="sp-diagram-scroll">
+      <div class="sp-diagram">
+
+        <!-- User feedback (foundation) -->
+        <div style="position:absolute; left:0; top:0; width:1340px; height:640px; z-index:0; clip-path:polygon(532px 528px, 1034px 640px, 30px 640px); background:#a9c3b6;"></div>
+        <div style="position:absolute; left:532px; top:566px; transform:translateX(-50%); text-align:center; z-index:1; white-space:nowrap;">
+          <div style="font-size:22px; font-weight:700; color:#28382e;">User feedback (human)</div>
+          <div style="font-size:15px; color:#2f4438; margin-top:2px;">taken into account across every module</div>
+        </div>
+
+        <!-- Arrows -->
+        <div style="position:absolute; left:249px; top:69px; width:169px; height:12px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(0deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:54px; top:256px; width:143px; height:4104px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(-90deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:150px; top:254px; width:40px; height:16px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(-90deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:528px; top:206px; width:21px; height:6px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(90deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:797px; top:281px; width:166px; height:76px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(162deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:796px; top:223px; width:187px; height:142px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(206deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:287px; top:319px; width:134px; height:21px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(-4deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:289px; top:451px; width:138px; height:111px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(13deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:528px; top:415px; width:27px; height:6px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(90deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div><div style="position:absolute; left:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-right:9px solid #3C5343;"></div></div>
+        <div style="position:absolute; left:769px; top:430px; width:232px; height:11px; border-top:2px solid #3C5343; transform-origin:0 0; transform:rotate(180deg); z-index:2;"><div style="position:absolute; right:-2px; top:-6px; width:0; height:0; border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:9px solid #3C5343;"></div></div>
+
+        <!-- Input Data -->
+        <div style="position:absolute; left:40px; top:30px; width:200px; height:74px; background:#fff; border:1.5px solid #3C5343; border-radius:14px; box-shadow:0 2px 12px rgba(60,83,67,.08); display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:3;">
+          <div style="font-size:18px; font-weight:700; color:#3C5343;">Input Data</div>
+          <div style="font-size:15px; color:#3C5343;">(open metadata)</div>
+        </div>
+
+        <!-- Vocabulary -->
+        <a href="https://github.com/sentier-dev/sentier-vocab" target="_blank" rel="noopener noreferrer" class="sp-node" style="position:absolute; left:84px; top:143px; width:124px; height:60px; background:#fff; border:1.5px solid #3C5343; border-radius:14px; box-shadow:0 2px 12px rgba(60,83,67,.08); display:flex; align-items:center; justify-content:center; z-index:3;">
+          <div style="font-size:18px; font-weight:700; color:#3C5343;">Vocabulary</div>
+          <span class="sp-gh-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>
+        </a>
+
+        <!-- Models -->
+        <div style="position:absolute; left:426px; top:8px; width:190px; height:190px; background:#fff; border:1.5px solid #3C5343; border-radius:50%; box-shadow:0 2px 12px rgba(60,83,67,.08); z-index:3;">
+          <div style="position:absolute; top:14px; left:0; right:0; text-align:center; font-size:18px; font-weight:700; color:#3C5343;">Models</div>
+          <div style="position:absolute; left:26px; top:50px; width:64px; height:64px; border-radius:50%; background:#d5e2da; display:flex; align-items:center; justify-content:center; font-size:12px; color:#3C5343;">model</div>
+          <div style="position:absolute; left:108px; top:56px; width:52px; height:52px; border-radius:50%; background:#d5e2da; display:flex; align-items:center; justify-content:center; font-size:12px; color:#3C5343;">model</div>
+          <div style="position:absolute; left:66px; top:108px; width:70px; height:70px; border-radius:50%; background:#d5e2da; display:flex; align-items:center; justify-content:center; font-size:12px; color:#3C5343;">model</div>
+        </div>
+
+        <!-- Importer -->
+        <a href="https://github.com/sentier-dev/sentier-importers" target="_blank" rel="noopener noreferrer" class="sp-node" style="position:absolute; left:30px; top:262px; width:248px; height:206px; background:#fff; border:1.5px solid #3C5343; border-radius:14px; box-shadow:0 2px 12px rgba(60,83,67,.08); z-index:3; display:block;">
+          <div style="position:absolute; top:12px; left:0; right:0; text-align:center; font-size:18px; font-weight:700; color:#3C5343;">Importer</div>
+          <span class="sp-gh-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>
+        </a>
+        <div style="position:absolute; left:52px; top:306px; width:204px; height:70px; background:#7d9c88; clip-path:polygon(14% 0%, 86% 0%, 100% 50%, 86% 100%, 14% 100%, 0% 50%); filter:drop-shadow(0 2px 6px rgba(60,83,67,.18)); display:flex; align-items:center; justify-content:center; text-align:center; z-index:4;"><span style="font-size:15px; font-weight:600; color:#22332a;">Validation (auto)</span></div>
+        <div style="position:absolute; left:46px; top:386px; width:216px; height:74px; background:#7d9c88; clip-path:polygon(13% 0%, 87% 0%, 100% 50%, 87% 100%, 13% 100%, 0% 50%); filter:drop-shadow(0 2px 6px rgba(60,83,67,.18)); display:flex; align-items:center; justify-content:center; text-align:center; z-index:4;"><span style="font-size:14px; font-weight:600; color:#22332a; line-height:1.25; padding:0 26px;">Cross-check (auto) based on external sources</span></div>
+
+        <!-- Inventory -->
+        <a href="https://github.com/sentier-dev/sentier-inventory" target="_blank" rel="noopener noreferrer" class="sp-node" style="position:absolute; left:430px; top:233px; width:190px; height:172px; background:#fff; border:1.5px solid #3C5343; border-radius:14px; box-shadow:0 2px 12px rgba(60,83,67,.08); z-index:3; display:block;">
+          <div style="position:absolute; top:12px; left:0; right:0; text-align:center; font-size:18px; font-weight:700; color:#3C5343;">Inventory</div>
+          <span class="sp-gh-icon" style="z-index:5;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>
+          <div style="position:absolute; left:25px; top:108px; width:138px; height:48px; background:#dad6c4; border:1px solid #c6c2ac; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600; color:#3C5343; z-index:4;">background</div>
+          <div style="position:absolute; left:26px; top:48px; width:138px; height:48px; background:#dad6c4; border:1px solid #c6c2ac; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600; color:#3C5343; z-index:4;">foreground</div>
+        </a>
+
+        <!-- LCIA Methods -->
+        <a href="https://github.com/sentier-dev/sentier-methods" target="_blank" rel="noopener noreferrer" class="sp-node" style="position:absolute; left:430px; top:444px; width:190px; height:70px; background:#fff; border:1.5px solid #3C5343; border-radius:14px; box-shadow:0 2px 12px rgba(60,83,67,.08); display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:700; color:#3C5343; z-index:3;">
+          LCIA Methods
+          <span class="sp-gh-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>
+        </a>
+
+        <!-- Review (human) -->
+        <div style="position:absolute; left:801px; top:208px; width:184px; height:90px; clip-path:polygon(14% 0%, 86% 0%, 100% 50%, 86% 100%, 14% 100%, 0% 50%); filter:drop-shadow(0 2px 6px rgba(60,83,67,.18)); display:flex; align-items:center; justify-content:center; text-align:center; z-index:3; background-color:#A9C3B6;"><span style="font-size:17px; font-weight:700; color:#22332a; line-height:1.2;">Review<br>(human)</span></div>
+
+        <!-- Flow Mapper -->
+        <a href="https://github.com/sentier-dev/sentier-mappings" target="_blank" rel="noopener noreferrer" class="sp-node" style="position:absolute; left:781px; top:356px; width:214px; height:150px; background:#fff; border:1.5px solid #3C5343; border-radius:14px; box-shadow:0 2px 12px rgba(60,83,67,.08); z-index:3; display:block;">
+          <div style="position:absolute; top:12px; left:46px; text-align:center; font-size:18px; font-weight:700; color:#3C5343;">Flow Mapper</div>
+          <span class="sp-gh-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>
+        </a>
+        <div style="position:absolute; left:807px; top:414px; width:162px; height:64px; background:#dad6c4; border:1px solid #c6c2ac; border-radius:8px; display:flex; align-items:center; justify-content:center; text-align:center; font-size:15px; font-weight:600; color:#3C5343; line-height:1.25; z-index:4;">consensus<br>elementary flows</div>
+
+        <!-- Edge labels -->
+        <div style="position:absolute; left:338px; top:92px; transform:translate(-50%,-50%); background:#F0EEE1; border:1px solid #d4d2c5; color:#4a6652; font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px; white-space:nowrap; z-index:4;">ingest</div>
+        <div style="position:absolute; left:102px; top:232px; transform:translate(-50%,-50%); background:#F0EEE1; border:1px solid #d4d2c5; color:#4a6652; font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px; white-space:nowrap; z-index:4;">imports</div>
+        <div style="position:absolute; left:337px; top:387px; transform:translate(-50%,-50%); background:#F0EEE1; border:1px solid #d4d2c5; color:#4a6652; font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px; white-space:nowrap; z-index:4;">imports</div>
+        <div style="position:absolute; left:591px; top:216px; transform:translate(-50%,-50%); background:#F0EEE1; border:1px solid #d4d2c5; color:#4a6652; font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px; white-space:nowrap; z-index:4;">generate</div>
+        <div style="position:absolute; left:749px; top:257px; transform:translate(-50%,-50%); background:#F0EEE1; border:1px solid #d4d2c5; color:#4a6652; font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px; white-space:nowrap; z-index:4;">review</div>
+        <div style="position:absolute; left:691px; top:409px; transform:translate(-50%,-50%); background:#F0EEE1; border:1px solid #d4d2c5; color:#4a6652; font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px; white-space:nowrap; z-index:4;">map flows</div>
+
+        <!-- Legend -->
+        <div style="position:absolute; left:1061px; top:163px; width:244px; background:#fff; border:1.5px solid #3C5343; border-radius:14px; box-shadow:0 2px 12px rgba(60,83,67,.08); padding:16px 22px; box-sizing:border-box; z-index:5;">
+          <div style="font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#84AE99; margin-bottom:14px;">Legend</div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;"><span style="flex:0 0 40px; display:flex; justify-content:center;"><span style="width:36px; height:20px; background:#fff; border:1.5px solid #3C5343; border-radius:5px;"></span></span><span style="font-size:14px; color:#2B2B2B;">Module</span></div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;"><span style="flex:0 0 40px; display:flex; justify-content:center;"><span style="width:36px; height:20px; background:#dad6c4; border:1px solid #c6c2ac; border-radius:5px;"></span></span><span style="font-size:14px; color:#2B2B2B;">Datasets / databases / flows</span></div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;"><span style="flex:0 0 40px; display:flex; justify-content:center;"><span style="width:36px; height:22px; background:#fff; border:1.5px solid #3C5343; border-radius:50%;"></span></span><span style="font-size:14px; color:#2B2B2B;">Models</span></div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;"><span style="flex:0 0 40px; display:flex; justify-content:center;"><span style="width:34px; height:22px; clip-path:polygon(14% 0%, 86% 0%, 100% 50%, 86% 100%, 14% 100%, 0% 50%); background-color:#A9C3B6;"></span></span><span style="font-size:14px; color:#2B2B2B;">Checking</span></div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;"><span style="flex:0 0 40px; display:flex; justify-content:center;"><span style="width:28px; height:22px; background:#a9c3b6; clip-path:polygon(50% 0%, 100% 100%, 0% 100%);"></span></span><span style="font-size:14px; color:#2B2B2B;">User feedback</span></div>
+          <div style="display:flex; align-items:center; gap:14px; padding-top:12px; border-top:1px solid #eceadd;"><span style="flex:0 0 40px; display:flex; justify-content:center; color:#84AE99;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span><span style="font-size:14px; color:#2B2B2B;">Links to GitHub repo</span></div>
+        </div>
+
+      </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-content">
+        <div class="footer-info">
+          Départ de Sentier, Dorfsteig 8, 5223 Riniken AG, Switzerland.<br>
+          <a href="https://www.zefix.ch/en/search/entity/list/firm/1550430">VAT CHE-329.638.515</a><br>
+          <a href="https://github.com/Depart-de-Sentier/dds-logo">Logo</a> by <a href="https://proov.fr/">Sylvain Prevost</a> ·
+          <a href="https://github.com/Depart-de-Sentier/Financial">Financial transparency</a>
+        </div>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Depart-de-Sentier" class="footer-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/d%C3%A9part-de-sentier/" class="footer-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js" defer></script>
+  <script>
+    (function () {
+      var wrap = document.querySelector('.sp-diagram-scroll');
+      var diagram = document.querySelector('.sp-diagram');
+      if (!wrap || !diagram) return;
+      function fitDiagram() {
+        var scale = Math.min(1, wrap.clientWidth / 1340);
+        diagram.style.transform = 'scale(' + scale + ')';
+        wrap.style.height = (640 * scale) + 'px';
+      }
+      window.addEventListener('resize', fitDiagram);
+      fitDiagram();
+    })();
+  </script>
+</body>
+</html>
